@@ -1,4 +1,5 @@
 import { View } from "react-native"
+import { router } from "expo-router"; // é utilizado para a navegação
 import { Welcome } from "@/components/welcome"; // importa o componente de welcome
 import { Steps } from "@/components/steps"; // importa o componente de steps
 import { Button } from "@/components/button"; // importa o componente do button
@@ -9,7 +10,7 @@ export default function Index() {
             <Welcome />
             <Steps />
 
-            <Button>
+            <Button onPress={() => router.navigate("/home")}>
                 <Button.Title>Começar</Button.Title>
             </Button>
         </View>
